@@ -18,6 +18,8 @@ public class Gun : MonoBehaviour
     int ammoLeft, ammoShot;
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,7 @@ public class Gun : MonoBehaviour
         shootDirection = Camera.main.ScreenToWorldPoint(shootDirection);
         shootDirection = shootDirection-transform.position;
 
-        //Spawn bullet at attack point
+       //Spawn bullet at attack point
         GameObject currentBullet = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0,0,0)));
 
         //rotate the bullet to make it spread

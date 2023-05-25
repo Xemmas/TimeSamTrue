@@ -6,21 +6,21 @@ using UnityEngine.UI;
 public class UI_Inventory : MonoBehaviour
 {
     private Inventory inventory;
-    public Transform itemSlotContainer;
+    private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
 
-    void Awake()
+    private void Awake()
     {
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
-
-    } 
+    }
 
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
         inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventoryItems();
+
     }
 
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
@@ -32,25 +32,30 @@ public class UI_Inventory : MonoBehaviour
     {
         foreach (Transform child in itemSlotContainer)
         {
-            if (child == itemSlotTemplate) continue;
+            if(child == itemSlotTemplate)
+            {
+                continue;
+            }
             Destroy(child.gameObject);
         }
         int x = 1;
-        int y = -1;
-        float itemSlotCellSize = 30f;
-        foreach (Item item in inventory.GetItemList())
+        int y = 0;
+        float itemSlotCellSize = 250f;
+        foreach(Item item in inventory.GetItemList())
         {
-            RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
+            RectTransform itemSlotRectTransform =  Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
             image.sprite = item.GetSprite();
-            x = x + 4;
-            if (x > 10)
+            x++;
+            if (x > 3)
             {
                 x = 1;
-                y = y - 3;
+                y--;
             }
         }
     }
+
+
 }
