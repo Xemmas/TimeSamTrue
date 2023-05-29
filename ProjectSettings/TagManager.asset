@@ -45,3 +45,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Map
+    uniqueID: 2328577069
+    locked: 0
+  - name: Enemies
+    uniqueID: 3815106497
+    locked: 0
+  - name: Bullets
+    uniqueID: 3450304079
+    locked: 0
+  - name: Item
+    uniqueID: 3978402837
+    locked: 0
+  - name: Players
+    uniqueID: 2398365307
+    locked: 0

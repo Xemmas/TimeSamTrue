@@ -11,6 +11,7 @@ public class EnemyChase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
+        player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
     }
 

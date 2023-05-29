@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             // Check if it's an enemy
-            if (enemy.gameObject.CompareTag("enemy"))
+            if (enemy.gameObject.CompareTag("Enemies"))
             {
                 // Get the enemy script and damage the enemy
                 enemy.GetComponent<Enemy>().TakeDamage(areaDamage);
