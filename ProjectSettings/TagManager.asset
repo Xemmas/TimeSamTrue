@@ -17,7 +17,7 @@ TagManager:
   - UI
   - Enemies
   - Map
-  - 
+  - InvisWall
   - itemBG
   - itemIcon
   - Player
