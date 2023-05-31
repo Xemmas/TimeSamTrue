@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        ScoreManager.instance.AddScore(1);
         Destroy(gameObject);
     }
 }
