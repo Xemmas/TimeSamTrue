@@ -1600,8 +1600,8 @@ MonoBehaviour:
   m_text: "Welcome to Time Samurai!\n\nThere has been a shift in the time continuum,
     causing a break between edo Japan and diesel punk. \n\nCollect 3 artifacts in
     both timelines while avoiding a hoard of enemies! Once collecting all 6 artifacts,
-    the timeline will be restored!\n\n+Left Click - Melee Slash\n+Right Click - Shoot\n+Left
-    Ctrl - Dash\n+Tab - Swap between timelines."
+    the timeline will be restored!\n\n+Left Click - Melee Slash\n+Right Click - Shoot\n+R
+    - Reload Gun\n+Left Ctrl - Dash\n+Tab - Swap between timelines."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
